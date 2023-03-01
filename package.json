@@ -1,0 +1,38 @@
+{
+  "name": "rntemplate",
+  "description": "",
+  "version": "0.0.0-development",
+  "main": ".eslintrc.js",
+  "devDependencies": {
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/github": "^8.0.6",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.0",
+    "semantic-release": "^20.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
+    "semantic-release": "semantic-release"
+  },
+  "repository": "git@github.com:QasimJaffry/rntemplate.git",
+  "keywords": [],
+  "author": "Qasim Hassan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/QasimJaffry/rntemplate/issues"
+  },
+  "homepage": "https://github.com/QasimJaffry/rntemplate#readme",
+  "dependencies": {
+    "@types/inquirer": "^8.2.4",
+    "inquirer": "^8.2.2",
+    "ora": "^5.4.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
