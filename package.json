@@ -17,7 +17,10 @@
     "prepare": "husky install",
     "semantic-release": "semantic-release"
   },
-  "repository": "git@github.com:QasimJaffry/rntemplate.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QasimJaffry/rntemplate.git"
+  },
   "keywords": [],
   "author": "Qasim Hassan",
   "license": "MIT",
