@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/QasimJaffry/rntemplate.git"
+    "url": "git+https://github.com/QasimJaffry/rntemplate.git"
   },
   "keywords": [],
   "author": "Qasim Hassan",
