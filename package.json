@@ -31,7 +31,9 @@
   "dependencies": {
     "@types/inquirer": "^8.2.4",
     "inquirer": "^8.2.2",
-    "ora": "^5.4.1"
+    "ora": "^5.4.1",
+    "kleur": "^4.1.4",
+    "prompts": "^2.4.1"
   },
   "config": {
     "commitizen": {
