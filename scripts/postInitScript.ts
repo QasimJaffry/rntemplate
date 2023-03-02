@@ -1,4 +1,4 @@
-#!/usr/bin/env node\
+#!/usr/bin/env ts-node
 
 // Show spinner in terminal and ask for questions
 
