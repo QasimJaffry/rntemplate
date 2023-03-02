@@ -1,22 +1,7 @@
 {
   "name": "rntemplate",
-  "description": "",
-  "version": "0.0.0-development",
-  "main": ".eslintrc.js",
-  "devDependencies": {
-    "@semantic-release/commit-analyzer": "^9.0.2",
-    "@semantic-release/github": "^8.0.6",
-    "@semantic-release/npm": "^9.0.1",
-    "@semantic-release/release-notes-generator": "^10.0.3",
-    "cz-conventional-changelog": "^3.3.0",
-    "husky": "^8.0.0",
-    "semantic-release": "^20.1.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install",
-    "semantic-release": "semantic-release"
-  },
+  "version": "0.0.1",
+  "description": "React Native Boilerplate",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/QasimJaffry/rntemplate.git"
@@ -28,16 +13,28 @@
     "url": "https://github.com/QasimJaffry/rntemplate/issues"
   },
   "homepage": "https://github.com/QasimJaffry/rntemplate#readme",
+  "main": "post-init.script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "cz",
+    "prepare": "husky install"
+  },
   "dependencies": {
-    "@types/inquirer": "^8.2.4",
-    "inquirer": "^8.2.2",
-    "ora": "^5.4.1",
     "kleur": "^4.1.4",
     "prompts": "^2.4.1"
   },
+  "devDependencies": {
+    "@commitlint/cli": "^16.0.2",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@commitlint/cz-commitlint": "^16.0.0",
+    "@commitlint/prompt-cli": "^16.0.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^7.0.4"
+  },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "@commitlint/cz-commitlint"
     }
   }
 }

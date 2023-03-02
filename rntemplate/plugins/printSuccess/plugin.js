@@ -1,4 +1,4 @@
-const {green, blue, yellow, red} = require('kleur');
+const { green, blue, yellow, red } = require('kleur');
 
 module.exports = {
   async apply(value, previousValues) {
@@ -7,7 +7,21 @@ module.exports = {
       console.log(
         'TheCodingMachine React-Native Boilerplate initialized with success ! 🚀\n',
       );
-
+      console.log(
+        `${green(
+          '                                                                    .-`    `::  \n' +
+            ' `/////////////     `/shhhy+-   ://.        /sy/                   /ss/   :NMN: \n' +
+            ' `sssssyhhhyhhy:` `yMMMMNNMMMd. osss:     `hMMMh-    .-`         `+ss:   +MMm/. \n' +
+            '      :MMM+----. `mMMm+:-`.oo/` osssyo`  `dMMMMh-   ohhh-       `oyy+-  sMMd/.  \n' +
+            '      :MMM+`     oMMN/-         osssyhs`.mMMMMMh-   -hds`      .syy+- `hMMh:`   \n' +
+            '      :MMM+`     hMMd:          oss-ohhhMMMhdMMh-    `.       +NNm/. .dMMy:`    \n' +
+            '      :MMM+`     oMMN/          oss-`shdMMd:dMMh-    :-`     sMMd/. -NMMo-      \n' +
+            '      :MMM+`     `mMMm/`  `/+:. oss- `sdMd:.hMMh-   hMys-  `hMMh:` -hdy-`       \n' +
+            '      :MMM+`      `yMMMMdssss+  oss.  `oh/- hMMh-   -hyo:  dMMs:` -ss+`         \n' +
+            '      .oys:`        .+yhyo/-    -::`    ``  -syo-     ..`  +mo-   `//           \n' +
+            '        ``             ```                    ``            `.                  ',
+        )}`,
+      );
       if (previousValues.typescript) {
         console.log(blue('  THE TYPESCRIPT VERSION 📘'));
       } else {
