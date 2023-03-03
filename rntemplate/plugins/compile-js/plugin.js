@@ -15,11 +15,6 @@ module.exports = {
           {stdio: 'pipe'},
         );
 
-        // console.log('🖼️  Copying assets...');
-        // await execSync('cp -R src/theme/assets js/src/theme/assets', {
-        //   stdio: 'pipe',
-        // });
-
         console.log('♻️  Replacing source...');
         await execSync('rm -rf src', {stdio: 'pipe'});
         await execSync('cp -R js/src ./src', {stdio: 'pipe'});
@@ -36,6 +31,8 @@ module.exports = {
             'typescript',
           {stdio: 'pipe'},
         );
+
+        console.log('\n');
 
         console.log('🌀 Removing types ...');
         await execSync('rm -rf @types', {stdio: 'pipe'});
