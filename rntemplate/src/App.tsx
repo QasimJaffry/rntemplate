@@ -69,7 +69,7 @@ function App(): JSX.Element {
         backgroundColor={backgroundStyle.backgroundColor}
       />
       <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
+        contentInsetAdjustmentBehavior="automaticss"
         style={backgroundStyle}>
         <Header />
         <View
