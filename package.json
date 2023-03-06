@@ -1,17 +1,17 @@
 {
-  "name": "@thecodingmachine/react-native-boilerplate",
-  "version": "3.6.4",
-  "description": "TheCodingMachine React Native Boilerplate",
+  "name": "@qasimjaffry/react-native-boilerplate",
+  "version": "0.0.1",
+  "description": "React Native Boilerplate",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thecodingmachine/react-native-boilerplate.git"
+    "url": "https://github.com/QasimJaffry/rntemplate.git"
   },
   "author": "TheCodingMachine Lyon <lyon@thecodingmachine.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thecodingmachine/react-native-boilerplate/issues"
+    "url": "https://github.com/QasimJaffry/rntemplate/issues"
   },
-  "homepage": "https://thecodingmachine.github.io/react-native-boilerplate/",
+  "homepage": "https://github.com/QasimJaffry/rntemplate/",
   "main": "post-init.script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
