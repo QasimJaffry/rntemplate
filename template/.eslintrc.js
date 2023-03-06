@@ -1,21 +1,29 @@
 module.exports = {
   env: {
-    'jest/globals': true,
+    es2021: true,
+    node: true,
   },
-  root: true,
-  extends: '@react-native-community',
+  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  overrides: [],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: ['react', 'react-hooks', 'prettier'],
   rules: {
-    'react-hooks/exhaustive-deps': 'off',
-    quotes: ['error', 'single'],
-    'object-curly-spacing': ['error', 'always'],
-    'array-bracket-spacing': ['error', 'never'],
-    'react/require-default-props': ['error'],
-    'react/default-props-match-prop-types': ['error'],
-    'react/sort-prop-types': ['error'],
+    'react/display-name': 'off',
+    'no-control-regex': 'off',
+    'react/prop-types': 0,
+    // indent: ['error', 4],
+    'linebreak-style': ['error', 'unix'],
+    indent: ['error', 2, { SwitchCase: 1 }],
+    quotes: ['error', 'single', { avoidEscape: true }],
+    semi: ['error', 'always'],
+    'no-empty-function': 'off',
   },
   settings: {
-    'import/resolver': {
-      'babel-module': {},
+    react: {
+      version: 'detect',
     },
   },
 };

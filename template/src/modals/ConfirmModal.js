@@ -8,10 +8,6 @@ import Dialog from '../components/Modal';
 
 const createStyles = theme => {
   const styles = StyleSheet.create({
-    iconSize: {
-      fontSize: hp(1.5),
-    },
-
     dialogStyle: {
       borderRadius: theme.size.radius.radius3,
     },
@@ -39,11 +35,7 @@ const ConfirmModal = props => {
   const [isCancelLoading, setIsCancelLoading] = useState(false);
 
   return (
-    <Dialog
-      style={styles.dialogStyle}
-      visible={props.visible}
-      close={props.onClose}
-    >
+    <Dialog style={styles.dialogStyle} visible={props.visible} close={props.onClose}>
       <View style={styles.buttonContainer}>
         <Button
           title={'No'}

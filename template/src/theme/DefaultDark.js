@@ -1,4 +1,4 @@
-import {borders, colors, fontsSize} from '../constants/index';
+import { borders, colors, fontsSize } from '../constants/index';
 
 const DEFAULT_DARK_COLOR_THEME = {
   primaryColor: colors.white,

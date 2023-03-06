@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 import { Image } from '@rneui/themed';
 import { Formik } from 'formik';
 import React, { useEffect } from 'react';
@@ -17,18 +18,18 @@ import Snackbar from '../../../components/Snackbar';
 
 export default function RecoverPassword(props) {
   const styles = useThemeAwareObject(createStyles);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [verifyCall, verifyResponse] = usePostApiMutation();
 
   const validationSchema = yup.object().shape({
     code: yup
       .string(t('code_required'))
       .required(t('code_required'))
-      .min(4, ({}) => t('code_length')),
+      .min(4, () => t('code_length')),
     password: yup
       .string(t('password_required'))
       .required(t('password_required'))
-      .min(8, ({}) => t('password_length'))
+      .min(8, () => t('password_length'))
       .matches(
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*[+£\_\-&\(\)/*"'\:;?!@#\$%\^&\*])(?=.{8,})/,
         t('password_length'),
@@ -36,7 +37,7 @@ export default function RecoverPassword(props) {
     confirm: yup
       .string(t('confirm_required'))
       .required(t('confirm_required'))
-      .min(8, ({}) => t('password_length'))
+      .min(8, () => t('password_length'))
       .matches(
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*[+£\_\-&\(\)/*"'\:;?!@#\$%\^&\*])(?=.{8,})/,
         t('password_length'),
@@ -106,11 +107,7 @@ export default function RecoverPassword(props) {
       source={require('../../../../assets/images/Background.png')}
       style={styles.mainContainer}
     >
-      <Header
-        statusbar={styles.statusbar}
-        barStyle="dark-content"
-        containerStyle={{ height: 0 }}
-      />
+      <Header statusbar={styles.statusbar} barStyle="dark-content" containerStyle={{ height: 0 }} />
       <KeyboardAwareScrollView
         style={{ height: 0 }}
         contentContainerStyle={styles.innerContainer}
@@ -134,7 +131,7 @@ export default function RecoverPassword(props) {
           validateOnBlur={false}
           validationSchema={validationSchema}
         >
-          {({ handleChange, handleSubmit, handleBlur, errors, values }) => {
+          {({ handleChange, handleSubmit, errors, values }) => {
             return (
               <View style={styles.fieldContainer}>
                 <Input

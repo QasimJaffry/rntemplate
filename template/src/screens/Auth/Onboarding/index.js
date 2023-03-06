@@ -1,20 +1,15 @@
+/* eslint-disable no-useless-escape */
 import { Image } from '@rneui/themed';
 import React, { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import {
-  Dimensions,
-  FlatList,
-  ImageBackground,
-  StatusBar,
-  View,
-} from 'react-native';
+import { Dimensions, FlatList, ImageBackground, StatusBar, View } from 'react-native';
 import { useDispatch } from 'react-redux';
 import Text from '../../../components/Text';
 import { setOnboard } from '../../../redux/slices/userSlice';
 import { useThemeAwareObject } from '../../../theme/index';
 import createStyles from './styles';
 
-export default function Onboarding(props) {
+export default function Onboarding() {
   const styles = useThemeAwareObject(createStyles);
   const dispatch = useDispatch();
   const { t, i18n } = useTranslation();
@@ -41,10 +36,7 @@ export default function Onboarding(props) {
 
   return (
     <>
-      <StatusBar
-        backgroundColor={styles.statusbarColor}
-        barStyle="light-content"
-      />
+      <StatusBar backgroundColor={styles.statusbarColor} barStyle="light-content" />
       <FlatList
         contentContainerStyle={styles.mainContainer}
         ref={flatlistRef}
@@ -70,23 +62,13 @@ export default function Onboarding(props) {
               <View style={styles.mainContainer}>
                 <ImageBackground
                   source={item.image}
-                  style={
-                    index == 0 ? styles.fullBackground : styles.headerImage
-                  }
+                  style={index == 0 ? styles.fullBackground : styles.headerImage}
                 >
-                  <Image
-                    source={item.logo}
-                    style={styles.logoImage}
-                    resizeMode="contain"
-                  />
+                  <Image source={item.logo} style={styles.logoImage} resizeMode="contain" />
                   {index == 0 && (
                     <>
-                      <Text style={[styles.headingText, styles.whiteText]}>
-                        {item.heading}
-                      </Text>
-                      <Text style={[styles.nameText, styles.whiteText]}>
-                        {item.name}
-                      </Text>
+                      <Text style={[styles.headingText, styles.whiteText]}>{item.heading}</Text>
+                      <Text style={[styles.nameText, styles.whiteText]}>{item.name}</Text>
                     </>
                   )}
                 </ImageBackground>
@@ -94,23 +76,13 @@ export default function Onboarding(props) {
                   <View style={styles.bottomView}>
                     <Text style={styles.headingText}>{t('lawyer_office')}</Text>
                     <Text style={styles.nameText}>{t('lawyer_name')}</Text>
-                    <Text style={styles.subHeadingText}>
-                      {t('latest_development')}
-                    </Text>
+                    <Text style={styles.subHeadingText}>{t('latest_development')}</Text>
                   </View>
                 )}
               </View>
-              <View
-                style={[
-                  styles.buttonView,
-                  i18n.language == 'ar' && styles.arabicButton,
-                ]}
-              >
+              <View style={[styles.buttonView, i18n.language == 'ar' && styles.arabicButton]}>
                 <Text
-                  style={[
-                    styles.proceedText,
-                    index == 0 && styles.proceedWhiteText,
-                  ]}
+                  style={[styles.proceedText, index == 0 && styles.proceedWhiteText]}
                   onPress={() => {
                     if (index == 1) {
                       dispatch(setOnboard(false));
@@ -140,7 +112,7 @@ export default function Onboarding(props) {
                     i18n.language == 'ar' && styles.arabicButton,
                   ]}
                   data={new Array(2)}
-                  renderItem={({ item, index }) => {
+                  renderItem={({ index }) => {
                     return (
                       <View
                         style={[

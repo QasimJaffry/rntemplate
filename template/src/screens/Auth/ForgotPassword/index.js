@@ -1,30 +1,27 @@
-import {Image} from '@rneui/themed';
-import {Formik} from 'formik';
+import { Image } from '@rneui/themed';
+import { Formik } from 'formik';
 import React from 'react';
-import {useTranslation} from 'react-i18next';
-import {ImageBackground, View} from 'react-native';
-import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import { useTranslation } from 'react-i18next';
+import { ImageBackground, View } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import * as yup from 'yup';
 import Button from '../../../components/Button';
 import Header from '../../../components/Header';
 import Input from '../../../components/InputField';
 import Snackbar from '../../../components/Snackbar';
 import Text from '../../../components/Text';
-import {forgotPassword} from '../../../endpoints';
-import {usePostApiMutation} from '../../../services/service';
-import {useThemeAwareObject} from '../../../theme/index';
+import { forgotPassword } from '../../../endpoints';
+import { usePostApiMutation } from '../../../services/service';
+import { useThemeAwareObject } from '../../../theme/index';
 import createStyles from './styles';
 
 export default function ForgotPassword(props) {
   const styles = useThemeAwareObject(createStyles);
-  const {t, i18n} = useTranslation();
+  const { t } = useTranslation();
   const [forgotCall, forgotResponse] = usePostApiMutation();
 
   const validationSchema = yup.object().shape({
-    email: yup
-      .string(t('email_required'))
-      .email(t('invalid_email'))
-      .required(t('email_required')),
+    email: yup.string(t('email_required')).email(t('invalid_email')).required(t('email_required')),
   });
 
   async function handleForgot(values) {
@@ -53,17 +50,15 @@ export default function ForgotPassword(props) {
   return (
     <ImageBackground
       source={require('../../../../assets/images/Background.png')}
-      style={styles.mainContainer}>
-      <Header
-        statusbar={styles.statusbar}
-        barStyle="dark-content"
-        containerStyle={{height: 0}}
-      />
+      style={styles.mainContainer}
+    >
+      <Header statusbar={styles.statusbar} barStyle="dark-content" containerStyle={{ height: 0 }} />
       <KeyboardAwareScrollView
-        style={{height: 0}}
+        style={{ height: 0 }}
         contentContainerStyle={styles.innerContainer}
         showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="always">
+        keyboardShouldPersistTaps="always"
+      >
         <Image
           source={require('../../../../assets/images/Logo.png')}
           style={styles.logoStyle}
@@ -77,8 +72,9 @@ export default function ForgotPassword(props) {
           onSubmit={values => handleForgot(values)}
           validateOnChange={false}
           validateOnBlur={false}
-          validationSchema={validationSchema}>
-          {({handleChange, handleSubmit, handleBlur, errors, values}) => {
+          validationSchema={validationSchema}
+        >
+          {({ handleChange, handleSubmit, errors, values }) => {
             return (
               <View style={styles.fieldContainer}>
                 <Input

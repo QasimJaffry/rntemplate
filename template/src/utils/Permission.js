@@ -1,4 +1,4 @@
-import {PermissionsAndroid} from 'react-native';
+import { PermissionsAndroid } from 'react-native';
 
 export const requestWritePermission = async () => {
   try {
@@ -32,9 +32,7 @@ export const requestReadPermission = async () => {
 
 export const requestCamera = async () => {
   try {
-    const granted = await PermissionsAndroid.request(
-      PermissionsAndroid.PERMISSIONS.CAMERA,
-    );
+    const granted = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.CAMERA);
     if (granted === PermissionsAndroid.RESULTS.GRANTED) {
       return true;
     } else {
