@@ -19,12 +19,8 @@
     "prepare": "husky install"
   },
   "keywords": [
-    "react",
-    "native",
     "boilerplate",
-    "thecodingmachine",
-    "react-native",
-    "starter-kit"
+    "react-native"
   ],
   "dependencies": {
     "kleur": "^4.1.4",
