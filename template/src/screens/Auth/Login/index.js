@@ -10,7 +10,7 @@ import Button from '../../../components/Button';
 import Header from '../../../components/Header';
 import Input from '../../../components/InputField';
 import Snackbar from '../../../components/Snackbar';
-import Text from '@components/Text';
+import Text from '../../../components/Text';
 import { login } from '../../../endpoints';
 import { setToken, setUser } from '../../../redux/slices/userSlice';
 import { usePostApiMutation } from '../../../services/service';

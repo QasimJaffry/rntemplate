@@ -1,47 +1,24 @@
-import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { StyleSheet } from 'react-native';
 import { useSelector } from 'react-redux';
-import '../../i18nconfig';
 import ForgotPassword from '../screens/Auth/ForgotPassword';
 import Login from '../screens/Auth/Login';
 import Onboarding from '../screens/Auth/Onboarding';
 import RecoverPassword from '../screens/Auth/RecoverPassword';
 import Home from '../screens/Main/Home';
 
-import { useThemeAwareObject } from '../theme';
-import { wp } from '../utils';
-import DrawerContent from './DrawerNavigator';
-
 const Stack = createStackNavigator();
-const Drawer = createDrawerNavigator();
 
 const DrawerStack = () => {
-  const createStyles = () => {
-    const themeStyles = StyleSheet.create({
-      drawerStyle: {
-        width: wp(100),
-      },
-    });
-    return themeStyles;
-  };
-  const styles = useThemeAwareObject(createStyles);
-  const { i18n } = useTranslation();
   return (
-    <Drawer.Navigator
-      initialRouteName="Main"
+    <Stack.Navigator
       screenOptions={{
         headerShown: false,
-        drawerStyle: styles.drawerStyle,
-        drawerPosition: i18n.language == 'en' ? 'left' : 'right',
       }}
-      drawerContent={props => <DrawerContent {...props} />}
     >
-      <Drawer.Screen name="Home" component={Home} options={{ unmountOnBlur: true }} />
-    </Drawer.Navigator>
+      <Stack.Screen name="Home" component={Home} />
+    </Stack.Navigator>
   );
 };
 
