@@ -12,13 +12,13 @@ export const apiHandler = createApi({
           method: method,
           headers: token
             ? {
-              Authorization: 'Bearer ' + `${token}`,
-            }
+                Authorization: 'Bearer ' + `${token}`,
+              }
             : {
-              Accept: 'application/json',
-              'Content-Type': 'multipart/form-data',
-              'X-Requested-With': 'XMLHttpRequest',
-            },
+                Accept: 'application/json',
+                'Content-Type': 'multipart/form-data',
+                'X-Requested-With': 'XMLHttpRequest',
+              },
         };
       },
     }),
@@ -30,13 +30,13 @@ export const apiHandler = createApi({
           body: data,
           headers: token
             ? {
-              Authorization: 'Bearer ' + `${token}`,
-            }
+                Authorization: 'Bearer ' + `${token}`,
+              }
             : {
-              Accept: 'application/json',
-              'Content-Type': 'multipart/form-data',
-              'X-Requested-With': 'XMLHttpRequest',
-            },
+                Accept: 'application/json',
+                'Content-Type': 'multipart/form-data',
+                'X-Requested-With': 'XMLHttpRequest',
+              },
         };
       },
     }),

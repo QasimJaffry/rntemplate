@@ -30,8 +30,7 @@ module.exports = {
    */
   async applyPlugins() {
     return plugins.reduce(
-      (acc, { name, ...plugin }) =>
-        acc.then(response => applyPlugin(name, plugin, response)),
+      (acc, { name, ...plugin }) => acc.then(response => applyPlugin(name, plugin, response)),
       Promise.resolve({}),
     );
   },
