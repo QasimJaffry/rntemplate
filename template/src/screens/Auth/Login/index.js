@@ -28,7 +28,7 @@ export default function Login(props) {
     password: yup.string(t('password_required')).required(t('password_required')),
   });
 
-  async function handleLogin(values) {
+  async function handleLogin(values, b) {
     let form = new FormData();
     form.append('email', values.username.toLowerCase());
     form.append('password', values.password);
