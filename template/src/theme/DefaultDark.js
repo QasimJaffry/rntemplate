@@ -17,11 +17,11 @@ const DEFAULT_DARK_COLOR_THEME = {
 
 const FONT_SET = {
   size: {
-    xSmall: fontsSize.extraSmall,
+    xsmall: fontsSize.xsmall,
     small: fontsSize.small,
     medium: fontsSize.medium,
     large: fontsSize.large,
-    xLarge: fontsSize.extraLarge,
+    xlarge: fontsSize.xlarge,
   },
   family: {},
 };

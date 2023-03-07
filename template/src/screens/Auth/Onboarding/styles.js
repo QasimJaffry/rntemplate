@@ -48,7 +48,7 @@ const createStyles = theme => {
     },
     subHeadingText: {
       color: theme.color.subPrimaryText,
-      fontSize: theme.size.xSmall,
+      fontSize: theme.size.xsmall,
       fontFamily: theme.family.book,
       alignSelf: 'center',
       textAlign: 'center',

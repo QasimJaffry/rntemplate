@@ -6,9 +6,7 @@ const createStyles = theme => {
     mainContainer: {
       flexGrow: 1,
     },
-    statusbar: {
-      backgroundColor: theme.color.primaryColor,
-    },
+
     logoStyle: {
       height: wp(30),
       width: wp(30),
@@ -23,7 +21,7 @@ const createStyles = theme => {
       marginHorizontal: wp(4),
     },
     welcomeText: {
-      fontSize: theme.size.xLarge,
+      fontSize: theme.size.xlarge,
       fontFamily: theme.family.bold,
       alignSelf: 'center',
     },

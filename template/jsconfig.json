@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@screens/": ["./src/screens/"]
     }
-  }
+  },
+  "exclude": ["node_modules", "dist"]
 }

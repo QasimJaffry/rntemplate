@@ -21,10 +21,10 @@ const CustomInputField = forwardRef((props, ref) => {
         marginBottom: hp(0.5),
       },
       textStyle: {
-        fontSize: theme.size.xSmall,
+        fontSize: theme.size.xsmall,
       },
       errorText: {
-        fontSize: theme.size.xSmall,
+        fontSize: theme.size.xsmall,
         paddingHorizontal: wp(5),
         color: theme.color.errorText,
         marginBottom: hp(0.5),
