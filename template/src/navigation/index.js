@@ -2,10 +2,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { useSelector } from 'react-redux';
-import ForgotPassword from '../screens/Auth/ForgotPassword';
 import Login from '../screens/Auth/Login';
 import Onboarding from '../screens/Auth/Onboarding';
-import RecoverPassword from '../screens/Auth/RecoverPassword';
 import Home from '../screens/Main/Home';
 
 const Stack = createStackNavigator();
@@ -33,8 +31,6 @@ const AuthStack = () => {
     >
       {onboard && <Stack.Screen name="Onboarding" component={Onboarding} />}
       <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
-      <Stack.Screen name="RecoverPassword" component={RecoverPassword} />
     </Stack.Navigator>
   );
 };

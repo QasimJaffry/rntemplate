@@ -1,4 +1,4 @@
-import Button from '@components/Button';
+import Button from '../components/Button';
 import { useThemeAwareObject } from '@theme';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
