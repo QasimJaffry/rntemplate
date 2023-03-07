@@ -14,7 +14,8 @@
     "commit": "cz",
     "prepare": "git init && husky install",
     "prepare-commit-msg": "npx husky add .husky/prepare-commit-msg 'exec < /dev/tty && npx cz --hook || true'",
-    "pre-commit": "npx husky add .husky/pre-commit 'npx lint-staged && npx validate-branch-name'",
+    "pre-commit": "npx husky add .husky/pre-commit 'npx lint-staged'",
+    "post-commit": "npx husky add .husky/post-commit 'npx validate-branch-name'",
     "format": "prettier --check ./src",
     "eslintfix": "eslint . --fix"
   },
