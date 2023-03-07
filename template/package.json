@@ -14,7 +14,7 @@
     "commit": "cz",
     "prepare": "git init && husky install",
     "prepare-commit-msg": "npx husky add .husky/prepare-commit-msg 'exec < /dev/tty && npx cz --hook || true'",
-    "pre-commit": "npx husky add .husky/pre-commit npx lint-staged",
+    "pre-commit": "npx husky add .husky/pre-commit 'npx lint-staged && npx validate-branch-name'",
     "format": "prettier --check ./src",
     "eslintfix": "eslint . --fix"
   },
@@ -101,5 +101,9 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "validate-branch-name": {
+    "pattern": "^(master|develop){1}$|^(feature|chore|fix)/([/w\\-\\d]+)/(JIRA|TIKET)-([w-d]+)$",
+    "errorMsg": "Please follow standard branch name, rename branch using: git branch -m <oldname> <newname>"
   }
 }
