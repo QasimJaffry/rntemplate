@@ -37,15 +37,9 @@ function CustomHeader(props) {
       rightComponent={props.rightComponent}
       backgroundColor={props.backgroundColor ?? styles.backgroundColor}
       containerStyle={[styles.containerStyle, props.containerStyle]}
-      centerContainerStyle={[
-        styles.centerContainerStyle,
-        props.centerContainerStyle,
-      ]}
+      centerContainerStyle={[styles.centerContainerStyle, props.centerContainerStyle]}
       leftContainerStyle={[styles.sideContainerStyle, props.leftContainerStyle]}
-      rightContainerStyle={[
-        styles.sideContainerStyle,
-        props.rightContainerStyle,
-      ]}
+      rightContainerStyle={[styles.sideContainerStyle, props.rightContainerStyle]}
     />
   );
 }

@@ -20,7 +20,7 @@ const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
 const DrawerStack = () => {
-  const createStyles = theme => {
+  const createStyles = () => {
     const themeStyles = StyleSheet.create({
       drawerStyle: {
         width: wp(100),
@@ -29,7 +29,7 @@ const DrawerStack = () => {
     return themeStyles;
   };
   const styles = useThemeAwareObject(createStyles);
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   return (
     <Drawer.Navigator
       initialRouteName="Main"
@@ -40,11 +40,7 @@ const DrawerStack = () => {
       }}
       drawerContent={props => <DrawerContent {...props} />}
     >
-      <Drawer.Screen
-        name="Home"
-        component={Home}
-        options={{ unmountOnBlur: true }}
-      />
+      <Drawer.Screen name="Home" component={Home} options={{ unmountOnBlur: true }} />
     </Drawer.Navigator>
   );
 };

@@ -24,12 +24,8 @@ export default function Login(props) {
   const [loginCall, loginResponse] = usePostApiMutation();
 
   const validationSchema = yup.object().shape({
-    username: yup
-      .string(t('username_required'))
-      .required(t('username_required')),
-    password: yup
-      .string(t('password_required'))
-      .required(t('password_required')),
+    username: yup.string(t('username_required')).required(t('username_required')),
+    password: yup.string(t('password_required')).required(t('password_required')),
   });
 
   async function handleLogin(values) {
@@ -59,11 +55,7 @@ export default function Login(props) {
       source={require('../../../../assets/images/Background.png')}
       style={styles.mainContainer}
     >
-      <Header
-        statusbar={styles.statusbar}
-        barStyle="dark-content"
-        containerStyle={{ height: 0 }}
-      />
+      <Header statusbar={styles.statusbar} barStyle="dark-content" containerStyle={{ height: 0 }} />
       <KeyboardAwareScrollView
         contentContainerStyle={styles.innerContainer}
         showsVerticalScrollIndicator={false}
@@ -86,7 +78,7 @@ export default function Login(props) {
           validateOnBlur={false}
           validationSchema={validationSchema}
         >
-          {({ handleChange, handleSubmit, handleBlur, errors, values }) => {
+          {({ handleChange, handleSubmit, errors, values }) => {
             return (
               <View style={styles.fieldContainer}>
                 <Input
@@ -123,13 +115,11 @@ export default function Login(props) {
                 />
                 {i18n.language == 'en' ? (
                   <Text style={styles.bottomText}>
-                    {t('login_agreement')}{' '}
-                    <Text style={styles.termsText}>{t('terms')}</Text>
+                    {t('login_agreement')} <Text style={styles.termsText}>{t('terms')}</Text>
                   </Text>
                 ) : (
                   <Text style={styles.bottomText}>
-                    {t('login_agreement')}{' '}
-                    <Text style={styles.termsText}>{t('terms')}</Text>{' '}
+                    {t('login_agreement')} <Text style={styles.termsText}>{t('terms')}</Text>{' '}
                     {t('our_own')}
                   </Text>
                 )}

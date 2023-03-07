@@ -1,6 +1,6 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {useThemeAwareObject} from '../theme';
+import { StyleSheet, View } from 'react-native';
+import { useThemeAwareObject } from '../theme';
 
 const Container = props => {
   const createStyles = theme => {
@@ -13,9 +13,7 @@ const Container = props => {
     return themeStyles;
   };
   const styles = useThemeAwareObject(createStyles);
-  return (
-    <View style={[styles.mainContainer, props.style]}>{props.children}</View>
-  );
+  return <View style={[styles.mainContainer, props.style]}>{props.children}</View>;
 };
 
 export default Container;

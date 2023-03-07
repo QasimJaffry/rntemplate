@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 const userSlicer = createSlice({
   name: 'user',
@@ -21,6 +21,6 @@ const userSlicer = createSlice({
   },
 });
 
-export const {setOnboard, setToken, setUser} = userSlicer.actions;
+export const { setOnboard, setToken, setUser } = userSlicer.actions;
 
 export default userSlicer.reducer;

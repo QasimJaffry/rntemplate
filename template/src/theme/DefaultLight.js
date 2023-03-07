@@ -1,4 +1,4 @@
-import {borders, colors, fontFamily, fontsSize} from '../constants/index';
+import { borders, colors, fontsSize } from '../constants/index';
 
 const DEFAULT_LIGHT_COLOR_THEME = {
   primaryColor: colors.white,

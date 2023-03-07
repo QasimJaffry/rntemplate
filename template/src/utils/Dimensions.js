@@ -1,10 +1,7 @@
-import {Dimensions, Platform} from 'react-native';
-import {
-  heightPercentageToDP,
-  widthPercentageToDP,
-} from 'react-native-responsive-screen';
+import { Dimensions, Platform } from 'react-native';
+import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen';
 
-const {width, height} = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 export const widthSize = width;
 export const heightSize = height;

@@ -1,15 +1,7 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
 import ReactNativeModal from 'react-native-modal';
-import { useThemeAwareObject } from '../theme';
 
 function CustomModal(props) {
-  const createStyles = theme => {
-    const themeStyles = StyleSheet.create({});
-    return themeStyles;
-  };
-  const styles = useThemeAwareObject(createStyles);
-
   return (
     <ReactNativeModal
       isVisible={props.visible}

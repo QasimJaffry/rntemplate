@@ -6,32 +6,17 @@ module.exports = {
     'footer-leading-blank': [1, 'always'],
     'footer-max-line-length': [2, 'always', 100],
     'header-max-length': [2, 'always', 100],
-    'subject-case': [
-      2,
-      'never',
-      ['sentence-case', 'start-case', 'pascal-case', 'upper-case'],
-    ],
+    'subject-case': [2, 'never', ['sentence-case', 'start-case', 'pascal-case', 'upper-case']],
     'subject-empty': [2, 'never'],
     'subject-full-stop': [2, 'never', '.'],
     'type-case': [2, 'always', 'lower-case'],
     'type-empty': [2, 'never'],
-    'type-enum': [
-      2,
-      'always',
-      [
-        '✨',
-        '🐛',
-        '📚',
-        '💎',
-        '♻️',
-        '🐙',
-      ],
-    ],
+    'type-enum': [2, 'always', ['✨', '🐛', '📚', '💎', '♻️', '🐙']],
   },
   prompt: {
     questions: {
       type: {
-        description: "Select the TYPE of change that you're committing",
+        description: 'Select the TYPE of change that you\'re committing',
         enum: {
           '✨': {
             description: 'A new feature',
@@ -55,25 +40,23 @@ module.exports = {
             emoji: '💎',
           },
           '♻️': {
-            description:
-              'A code change that neither fixes a bug nor adds a feature',
+            description: 'A code change that neither fixes a bug nor adds a feature',
             title: 'Code Refactoring',
             emoji: '♻️',
           },
           '🐙': {
-            description: 'Changes to the git configuration files and scripts (example scope: GitHub Actions)',
+            description:
+              'Changes to the git configuration files and scripts (example scope: GitHub Actions)',
             title: 'Github configuration',
             emoji: '🐙',
           },
         },
       },
       scope: {
-        description:
-          'What is the SCOPE of this change (e.g. component or file name)',
+        description: 'What is the SCOPE of this change (e.g. component or file name)',
       },
       subject: {
-        description:
-          'Write a short, imperative tense DESCRIPTION of the change',
+        description: 'Write a short, imperative tense DESCRIPTION of the change',
       },
       body: {
         description: 'Provide a longer description of the change',

@@ -1,4 +1,4 @@
-import {useKeyboard} from '@react-native-community/hooks';
+import { useKeyboard } from '@react-native-community/hooks';
 
 const keyboard = useKeyboard();
 

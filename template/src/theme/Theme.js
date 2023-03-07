@@ -1,6 +1,6 @@
 import React from 'react';
-import {DEFAULT_DARK_THEME, DEFAULT_DARK_THEME_ID} from './DefaultDark';
-import {DEFAULT_LIGHT_THEME, DEFAULT_LIGHT_THEME_ID} from './DefaultLight';
+import { DEFAULT_DARK_THEME, DEFAULT_DARK_THEME_ID } from './DefaultDark';
+import { DEFAULT_LIGHT_THEME, DEFAULT_LIGHT_THEME_ID } from './DefaultLight';
 
 const Context = React.createContext({
   theme: DEFAULT_LIGHT_THEME,
@@ -46,9 +46,7 @@ export const ThemeProvider = React.memo(props => {
     return value;
   }, [theme, SetThemeCallback, ToggleThemeCallback]);
 
-  return (
-    <Context.Provider value={MemoizedValue}>{props.children}</Context.Provider>
-  );
+  return <Context.Provider value={MemoizedValue}>{props.children}</Context.Provider>;
 });
 
 export const useTheme = () => React.useContext(Context);
