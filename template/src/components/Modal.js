@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactNativeModal from 'react-native-modal';
 
-function CustomModal(props) {
+function RnModal(props) {
   return (
     <ReactNativeModal
       isVisible={props.visible}
@@ -17,4 +17,4 @@ function CustomModal(props) {
   );
 }
 
-export default CustomModal;
+export default RnModal;

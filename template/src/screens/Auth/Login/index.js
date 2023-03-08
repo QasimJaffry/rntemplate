@@ -1,13 +1,13 @@
-import Button from '../../../components/Button';
+import Button from '@components/Button';
 import { Formik } from 'formik';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import * as yup from 'yup';
-import Input from '../../../components/InputField';
-import Text from '../../../components/Text';
-import { useThemeAwareObject } from '../../../theme';
+import Input from '@components/InputField';
+import Text from '@components/Text';
+import { useThemeAwareObject } from '@theme';
 import createStyles from './styles';
 
 export default function Login() {

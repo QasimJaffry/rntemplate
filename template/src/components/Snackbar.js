@@ -1,5 +1,5 @@
 import Snackbar from 'react-native-snackbar';
-import { colors } from '../constants';
+import { colors } from '@constants';
 
 export default function (message, error, duration) {
   Snackbar.show({

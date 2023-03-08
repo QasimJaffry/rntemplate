@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { hp, wp } from '../../../utils';
+import { hp, wp } from '@utils';
 
 const createStyles = theme => {
   const styles = StyleSheet.create({

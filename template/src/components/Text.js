@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
-import { useThemeAwareObject } from '../theme';
+import { useThemeAwareObject } from '@theme';
 
-const TextField = props => {
+const RnText = props => {
   const createStyles = theme => {
     const themeStyles = StyleSheet.create({
       textStyle: {
@@ -25,4 +25,4 @@ const TextField = props => {
   );
 };
 
-export default TextField;
+export default RnText;

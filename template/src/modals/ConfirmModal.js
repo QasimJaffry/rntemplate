@@ -1,10 +1,10 @@
-import Button from '../components/Button';
+import Button from '@components/Button';
 import { useThemeAwareObject } from '@theme';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import { hp, wp } from 'utils';
-import Dialog from '../components/Modal';
+import { hp, wp } from '@utils';
+import Dialog from '@components/Modal';
 
 const createStyles = theme => {
   const styles = StyleSheet.create({

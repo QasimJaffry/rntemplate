@@ -3,9 +3,9 @@ import React, { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Dimensions, FlatList, View } from 'react-native';
 import { useDispatch } from 'react-redux';
-import Text from '../../../components/Text';
-import { setOnboard } from '../../../redux/slices/userSlice';
-import { useThemeAwareObject } from '../../../theme/index';
+import Text from '@components/Text';
+import { setOnboard } from '@slices/userSlice';
+import { useThemeAwareObject } from '@theme';
 import createStyles from './styles';
 
 export default function Onboarding() {

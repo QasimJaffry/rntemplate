@@ -1,10 +1,10 @@
 import { Header } from '@rneui/themed';
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import { useThemeAwareObject } from '../theme';
-import { wp } from '../utils';
+import { useThemeAwareObject } from '@theme';
+import { wp } from '@utils';
 
-function CustomHeader(props) {
+function RnHeader(props) {
   const createStyles = theme => {
     const themeStyles = StyleSheet.create({
       statusBar: {
@@ -44,4 +44,4 @@ function CustomHeader(props) {
   );
 }
 
-export default CustomHeader;
+export default RnHeader;

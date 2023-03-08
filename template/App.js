@@ -1,11 +1,11 @@
+import { persistor, store } from '@store';
+import { ThemeProvider } from '@theme';
 import React from 'react';
-import { ActivityIndicator, LogBox } from 'react-native';
+import { LogBox } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import Route from './src/navigation';
-import { persistor, store } from './src/redux/store';
-import { ThemeProvider } from './src/theme';
+import Route from '@navigation';
 
 LogBox.ignoreAllLogs();
 

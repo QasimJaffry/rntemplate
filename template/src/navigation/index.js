@@ -3,9 +3,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { useColorScheme } from 'react-native';
 import { useSelector } from 'react-redux';
-import Login from '../screens/Auth/Login';
-import Onboarding from '../screens/Auth/Onboarding';
-import Home from '../screens/Main/Home';
+import Login from '@screens/Auth/Login';
+import Onboarding from '@screens/Auth/Onboarding';
+import Home from '@screens/Main/Home';
 import { DEFAULT_DARK_THEME, DEFAULT_LIGHT_THEME, useTheme } from '../theme';
 
 const Stack = createStackNavigator();

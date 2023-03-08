@@ -1,10 +1,10 @@
 import React from 'react';
 import { ActivityIndicator, StyleSheet, TouchableOpacity, View } from 'react-native';
-import { useThemeAwareObject } from '../theme';
-import { hp, wp } from '../utils';
+import { useThemeAwareObject } from '@theme';
+import { hp, wp } from '@utils';
 import Text from './Text';
 
-function CustomButton(props) {
+function RnButton(props) {
   const createStyles = theme => {
     const themeStyles = StyleSheet.create({
       whiteColor: theme.color.primaryColor,
@@ -67,4 +67,4 @@ function CustomButton(props) {
   );
 }
 
-export default CustomButton;
+export default RnButton;

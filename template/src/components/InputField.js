@@ -1,11 +1,11 @@
 import { Input } from '@rneui/themed';
 import React, { forwardRef } from 'react';
 import { StyleSheet } from 'react-native';
-import { useThemeAwareObject } from '../theme';
-import { hp, wp } from '../utils';
+import { useThemeAwareObject } from '@theme';
+import { hp, wp } from '@utils';
 import Text from './Text';
 
-const CustomInputField = forwardRef((props, ref) => {
+const RnInputField = forwardRef((props, ref) => {
   const createStyles = theme => {
     const themeStyles = StyleSheet.create({
       inputContainer: {
@@ -63,4 +63,4 @@ const CustomInputField = forwardRef((props, ref) => {
   );
 });
 
-export default CustomInputField;
+export default RnInputField;

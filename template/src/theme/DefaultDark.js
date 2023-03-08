@@ -1,7 +1,7 @@
-import { borders, colors, fontsSize } from '../constants/index';
+import { borders, colors, fontsSize } from '@constants';
 
 const DEFAULT_DARK_COLOR_THEME = {
-  primaryColor: colors.white,
+  primaryColor: colors.yellow,
   primaryText: colors.black,
   secondaryText: colors.white,
   errorText: colors.red,

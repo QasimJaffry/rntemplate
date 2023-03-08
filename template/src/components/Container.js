@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { useThemeAwareObject } from '../theme';
+import { useThemeAwareObject } from '@theme';
 
 const Container = props => {
   const createStyles = theme => {
