@@ -21,7 +21,21 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
-target 'Boilerplate' do
+# target 'Boilerplate' do
+abstract_target 'BoilerplateCommonPods' do 
+  target 'BoilerplateDev' do
+  end
+ 
+  target 'BoilerplateStg' do
+  end
+ 
+  target 'Boilerplate' do
+  end
+
+  pod 'react-native-config', :path => '../node_modules/react-native-config'
+  # For extensions without React dependencies
+  pod 'react-native-config/Extension', :path => '../node_modules/react-native-config'
+
   config = use_native_modules!
 
   # Flags change depending on the env values.
