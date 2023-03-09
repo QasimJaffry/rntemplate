@@ -34,9 +34,7 @@ local.properties
 *.keystore
 !debug.keystore
 
-.env.deveopment
-.env.production
-.env.staging
+.env.*
 
 # node.js
 #
