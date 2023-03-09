@@ -22,8 +22,6 @@ DerivedData
 *.xcuserstate
 template/ios/.xcode.env.local
 
-.env.*
-
 # Android/IntelliJ
 #
 build/
@@ -53,6 +51,8 @@ yarn-error.log
 **/fastlane/Preview.html
 **/fastlane/screenshots
 **/fastlane/test_output
+
+.env.*
 
 # Bundle artifact
 *.jsbundle
