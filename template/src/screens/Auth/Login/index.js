@@ -55,7 +55,7 @@ export default function Login() {
       <Text style={styles.subText}>{t('user_pass')}</Text>
       <Formik
         initialValues={{
-          username: '',
+          username: 's',
           password: '',
         }}
         onSubmit={() => dispatch(setToken(true))}
