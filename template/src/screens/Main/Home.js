@@ -12,7 +12,12 @@ const Home = () => {
   return (
     <View>
       <Text>Home</Text>
-      <Button title1={t('signin')} onPress={dispatch(setToken(false))} style={[]} loading={false} />
+      <Button
+        title1={t('signin')}
+        onPress={() => dispatch(setToken(false))}
+        style={[]}
+        loading={false}
+      />
     </View>
   );
 };
