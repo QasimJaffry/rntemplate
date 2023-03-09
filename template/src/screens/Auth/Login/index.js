@@ -9,11 +9,13 @@ import Input from '@components/InputField';
 import Text from '@components/Text';
 import { useThemeAwareObject } from '@theme';
 import createStyles from './styles';
+import { setToken } from '@slices/userSlice';
+import { useDispatch } from 'react-redux';
 
 export default function Login() {
   const styles = useThemeAwareObject(createStyles);
   const { t } = useTranslation();
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   // const [loginCall, loginResponse] = usePostApiMutation();
 
   const validationSchema = yup.object().shape({
@@ -56,7 +58,7 @@ export default function Login() {
           username: '',
           password: '',
         }}
-        onSubmit={values => console.log(values)}
+        onSubmit={() => dispatch(setToken(true))}
         validateOnChange={false}
         validateOnBlur={false}
         validationSchema={validationSchema}

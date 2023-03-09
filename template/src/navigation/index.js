@@ -10,7 +10,7 @@ import { DEFAULT_DARK_THEME, DEFAULT_LIGHT_THEME, useTheme } from '../theme';
 
 const Stack = createStackNavigator();
 
-const DrawerStack = () => {
+const AppStack = () => {
   return (
     <Stack.Navigator
       screenOptions={{
@@ -59,7 +59,7 @@ const MainStack = () => {
         }}
       >
         {token ? (
-          <Stack.Screen name="DrawerStack" component={DrawerStack} />
+          <Stack.Screen name="AppStack" component={AppStack} />
         ) : (
           <Stack.Screen name="Auth" component={AuthStack} />
         )}
