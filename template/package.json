@@ -22,8 +22,7 @@
     "prepare": "git init && husky install",
     "prepare-commit-msg": "npx husky add .husky/prepare-commit-msg 'exec < /dev/tty && npx cz --hook || true'",
     "pre-commit": "npx husky add .husky/pre-commit 'npx lint-staged'",
-    "post-commit": "npx husky add .husky/post-commit 'npx validate-branch-name'",
-    "postinstall": "yarn && bundle install && react-native setup-ios-permissions && pod-install"
+    "post-commit": "npx husky add .husky/post-commit 'npx validate-branch-name'"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.17.11",
