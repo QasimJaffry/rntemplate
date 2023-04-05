@@ -6,7 +6,7 @@ const Container = props => {
   const createStyles = theme => {
     const themeStyles = StyleSheet.create({
       mainContainer: {
-        flexGrow: 1,
+        flex: 1,
         backgroundColor: theme.color.primaryColor,
       },
     });

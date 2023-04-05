@@ -6,11 +6,10 @@
     "format": "prettier --check ./src",
     "eslintfix": "eslint . --fix",
     "android:staging": "react-native run-android --mode=stagingdebug --appId=com.boilerplate.staging",
-    "android:staging-release": "react-native run-android --mode=stagingrelease --appId=com.boilerplate.staging",
     "android:dev": "react-native run-android --mode=developmentdebug --appId=com.boilerplate.development",
-    "android:dev-release": "react-native run-android --mode=developmentrelease --appId=com.boilerplate.development",
     "android:prod": "react-native run-android --mode=productiondebug --appId=com.boilerplate.production",
-    "android:prod-release": "react-native run-android --mode=productionrelease --appId=com.boilerplate.production",
+    "b": "cd android && ./gradlew assembleRelease && cd ..",
+    "bundle": "cd android && ./gradlew bundleRelease && cd ..",
     "ios:dev": "react-native run-ios --scheme 'BoilerplateDev'",
     "ios:prod": "react-native run-ios --scheme 'Boilerplate'",
     "ios:staging": "react-native run-ios --scheme 'BoilerplateStg'",
@@ -22,7 +21,7 @@
     "prepare": "husky install",
     "prepare-commit-msg": "npx husky add .husky/prepare-commit-msg 'exec < /dev/tty && npx cz --hook || true'",
     "pre-commit": "npx husky add .husky/pre-commit 'npx lint-staged'",
-    "post-commit": "npx husky add .husky/post-commit 'npx validate-branch-name'"
+    "pre-push": "npx husky add .husky/pre-push 'npx validate-branch-name'"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.17.11",
@@ -40,6 +39,7 @@
     "react-i18next": "^12.2.0",
     "react-native": "0.71.3",
     "react-native-config": "^1.5.0",
+    "react-native-fast-image": "^8.6.3",
     "react-native-gesture-handler": "^2.9.0",
     "react-native-keyboard-aware-scroll-view": "^0.9.5",
     "react-native-mmkv": "^2.6.2",
@@ -91,7 +91,7 @@
     "metro-react-native-babel-preset": "0.73.7",
     "pod-install": "^0.1.38",
     "prettier": "^2.8.4",
-    "react-native-flipper": "^0.182.0",
+    "react-native-flipper": "^0.164.0",
     "react-test-renderer": "18.2.0",
     "redux-flipper": "^2.0.2",
     "typescript": "4.8.4",
@@ -116,7 +116,7 @@
     }
   },
   "validate-branch-name": {
-    "pattern": "^(master|develop){1}$|^(feature|chore|fix)/([/w\\-\\d]+)/(JIRA|TIKET)-([w-d]+)$",
+    "pattern": "^(master|develop){1}$|^(feature|chore|fix)/([\\w]){1,}$|^((JIRA|TICKET)-([\\d]){1,})$",
     "errorMsg": "Please follow standard branch name, rename branch using: git branch -m <oldname> <newname>"
   },
   "reactNativePermissionsIOS": [
